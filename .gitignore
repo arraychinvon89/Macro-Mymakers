@@ -8,20 +8,31 @@
 #                                             [ctrl] + [shift] + [5] = fline(40, 40, 0.65, "a7", 'f', 's', 80, "a5", 10);
 #                                             [ctrl] + [shift] + [6] = fline(70, 70, 0.75, "a7", 'f', 'p', 80, "a5", 0);
 #                                                                 --- ขอให้คุณสนุกกับโค้ดเรา ---
+
+
+
+
+
+
 import keyboard
 import time
+
 def auto_type(text):
     # ฟังก์ชันช่วยพิมพ์ข้อความ เพื่อความแม่นยำ
     keyboard.write(text)
+
 print("--- โปรแกรมเริ่มทำงานแล้ว ---")
+
+
 # กำหนด Hotkeys
 # หมายเหตุ: 'left ctrl' และ 'shift' ต้องกดค้างไว้แล้วตามด้วยตัวเลข
-keyboard.add_hotkey('ctrl+shift+1', lambda: auto_type('fline(85, 85, 0.75, 15, \'f\', \'l\', 80, "a2", 1);'))
-keyboard.add_hotkey('ctrl+shift+2', lambda: auto_type('fline(85, 85, 0.75, 15, \'f\', \'r\', 80, "a5", 1);'))
+keyboard.add_hotkey('ctrl+shift+1', lambda: auto_type('fline(85, 85, 0.75, "a0", \'f\', \'l\', 80, "a2", 1);'))
+keyboard.add_hotkey('ctrl+shift+2', lambda: auto_type('fline(85, 85, 0.75, "a7", \'f\', \'r\', 80, "a5", 1);'))
 keyboard.add_hotkey('ctrl+shift+3', lambda: auto_type('fline(50, 50, 0.75, "a0", \'c\', \'l\', 70, "a1", 10);'))
 keyboard.add_hotkey('ctrl+shift+4', lambda: auto_type('fline(50, 50, 0.75, "a7", \'c\', \'r\', 70, "a6", 10);'))
 keyboard.add_hotkey('ctrl+shift+5', lambda: auto_type('fline(20, 20, 0.75, "a7", \'f\', \'s\', 80, "a5", 10);'))
 keyboard.add_hotkey('ctrl+shift+6', lambda: auto_type('fline(85, 85, 0.85, "a7", \'f\', \'p\', 80, "a5", 0);'))
+
 # รอจนกว่าจะมีการกดปุ่มปิดโปรแกรม (Ctrl+Shift+Q)
 keyboard.wait('ctrl+shift+q')
 print("--- ปิดโปรแกรมแล้ว ---")
